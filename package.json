@@ -1,0 +1,27 @@
+{
+  "name": "fleet-payroll-system",
+  "version": "0.1.0",
+  "description": "NPC Fleet Payroll System — ระบบจัดการเงินเดือนคนขับรถ",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "setup-db": "node server/db/init.js",
+    "seed": "node server/db/seed.js"
+  },
+  "keywords": ["fleet", "payroll", "line-bot", "logistics"],
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@line/bot-sdk": "^9.0.0",
+    "better-sqlite3": "^11.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "googleapis": "^140.0.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
