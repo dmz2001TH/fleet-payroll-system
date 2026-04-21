@@ -2,7 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../../.env') });
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
+
+// Initialize database on startup
+require('./db/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve frontend static files if web/dist exists
-const webDist = path.join(__dirname, '../../web/dist');
+const webDist = path.join(__dirname, '../web/dist');
 if (fs.existsSync(webDist)) {
   app.use(express.static(webDist));
 }

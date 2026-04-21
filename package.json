@@ -7,7 +7,9 @@
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "setup-db": "node server/db/init.js",
-    "seed": "node server/db/seed.js"
+    "seed": "node server/db/seed.js",
+    "build": "cd web && npm install && npm run build",
+    "build:web": "cd web && npm run build"
   },
   "keywords": ["fleet", "payroll", "line-bot", "logistics"],
   "license": "UNLICENSED",
